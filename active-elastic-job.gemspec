@@ -1,5 +1,4 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'active_elastic_job/version'
@@ -15,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
   spec.homepage      = 'https://github.com/active-elastic-job/active-elastic-job'
 
-  spec.files         = Dir.glob('lib/**/*') + [ 'active-elastic-job.gemspec' ]
+  spec.files         = Dir.glob('lib/**/*') + ['active-elastic-job.gemspec']
   spec.executables   = []
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
@@ -23,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.7'
 
   spec.add_dependency 'aws-sdk-sqs', '~> 1'
-  spec.add_dependency 'rails', '>= 5.2.6', '< 8'
+  spec.add_dependency 'rails', '>= 5.2.6', '< 9'
 
   spec.add_development_dependency 'amazing_print', '~> 1.2'
   spec.add_development_dependency 'benchmark-ips', '~> 2.8'
